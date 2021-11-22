@@ -10,6 +10,10 @@
       :height="height"
       class="progressive-img_tiny progressive-img_filter-blur"
       :class="{ 'progressive-img_hidden': isLoaded }"
+      :style="{
+        backgroundImage: `url('${tinySrc}')`,
+        backgroundSize: '100% 100%'
+        }"
     ></canvas>
 
     <img
@@ -78,9 +82,9 @@ export default {
     }
 
     const createPlaceholder = () => {
-      tinyImage = new Image()
-      tinyImage.src = props.tinySrc
-      tinyImage.addEventListener('load', onTinyImageLoaded)
+      // tinyImage = new Image()
+      // tinyImage.src = props.tinySrc
+      // tinyImage.addEventListener('load', onTinyImageLoaded)
     }
 
 
