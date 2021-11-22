@@ -21,7 +21,7 @@ export default {
     imgs.forEach(img => {
       const width = img.width
       const height = img.height
-      const fullSrc = img.src
+      const fullSrc = img.dataset.fullSrc
       const tinySrc = img.dataset.tinySrc
 
       const piWrapper = document.createElement('span')
