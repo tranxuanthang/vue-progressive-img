@@ -43,15 +43,15 @@ export default {
         piFull.classList.remove('progressive-img_hidden')
         piTiny.classList.add('progressive-img_hidden')
 
-        img.attributes.forEach(attr => {
-          if (!piFull.getAttribute(attr.name)) {
-            piFull.setAttribute(attr.name, attr.value)
-          }
-        })
+        // img.attributes.forEach(attr => {
+        //   if (!piFull.getAttribute(attr.name)) {
+        //     piFull.setAttribute(attr.name, attr.value)
+        //   }
+        // })
 
-        if (img.getAttribute('class')) {
-          piFull.classList.add(img.getAttribute('class'))
-        }
+        // if (img.getAttribute('class')) {
+        //   piFull.classList.add(img.getAttribute('class'))
+        // }
       }
 
       piWrapper.appendChild(piTiny)
