@@ -2,6 +2,10 @@
 
 Progressive Image Loading plugin for Vue 3
 
+## Example/Demo
+- https://github.com/tranxuanthang/cat-pics-pil
+- https://awesome-shirley-c6c0a7.netlify.app/
+
 ## Installation
 Install the package:
 
