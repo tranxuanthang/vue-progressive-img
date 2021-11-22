@@ -1,5 +1,7 @@
 # vue-progressive-img
 
+![Peek 2021-11-23 00-06](https://user-images.githubusercontent.com/15942946/142904401-28c22329-2e7f-45f8-9655-307f0aef4be2.gif)
+
 Progressive Image Loading plugin for Vue 3
 
 ## Example/Demo
