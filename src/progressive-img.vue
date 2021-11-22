@@ -75,26 +75,11 @@ export default {
       isLoaded.value = true
     }
 
-    const onTinyImageLoaded = () => {
-      const ctx = canvasElement.value.getContext('2d')
-      ctx.drawImage(tinyImage, 0, 0, tinyImage.naturalWidth, tinyImage.naturalHeight, 0, 0, props.width, props.height);
-      tinyImage.removeEventListener('load', onTinyImageLoaded)
-    }
-
-    const createPlaceholder = () => {
-      // tinyImage = new Image()
-      // tinyImage.src = props.tinySrc
-      // tinyImage.addEventListener('load', onTinyImageLoaded)
-    }
-
-
     onMounted(() => {
-      createPlaceholder()
       initIntersectionObserver()
     })
 
     onBeforeUnmount(() => {
-      tinyImage.removeEventListener('load', onTinyImageLoaded)
       if (observer) {
         observer.disconnect()
       }

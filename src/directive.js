@@ -31,13 +31,8 @@ export default {
       piTiny.className = 'progressive-img_tiny progressive-img_filter-blur'
       piTiny.width = width
       piTiny.height = height
-
-      const tinyImg = new Image()
-      tinyImg.onload = () => {
-        const ctx = piTiny.getContext('2d')
-        ctx.drawImage(tinyImg, 0, 0, tinyImg.naturalWidth, tinyImg.naturalHeight, 0, 0, width, height);
-      }
-      tinyImg.src = tinySrc
+      piTiny.style.backgroundImage = `url('${tinySrc}')`
+      piTiny.style.backgroundSize = '100% 100%'
 
       const piFull = document.createElement('img')
       piFull.className = 'progressive-img_full progressive-img_hidden'
