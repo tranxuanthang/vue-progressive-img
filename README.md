@@ -14,10 +14,10 @@ Install the package:
 
 ```shell
 # npm
-npm install --save vue-progressive-img
+npm install --save @tranxuanthang/vue-progressive-img
 
 # yarn
-yarn add vue-progressive-img
+yarn add @tranxuanthang/vue-progressive-img
 ```
 
 Initialize the plugin:
