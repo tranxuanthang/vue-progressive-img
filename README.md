@@ -25,8 +25,8 @@ Initialize the plugin:
 ```diff
   import { createApp } from 'vue'
   import App from './App.vue'
-+ import { ProgressiveImgPlugin } from 'vue-progressive-img'
-+ import 'vue-progressive-img/src/styles.css'
++ import { ProgressiveImgPlugin } from '@tranxuanthang/vue-progressive-img'
++ import '@tranxuanthang/vue-progressive-img/src/styles.css'
 
   const app = createApp(App)
 + app.use(ProgressiveImgPlugin)
