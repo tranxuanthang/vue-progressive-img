@@ -37,11 +37,26 @@ export default {
   inheritAttrs: false,
 
   props: {
-    width: Number,
-    height: Number,
-    src: String,
-    tinySrc: String,
-    wrapperClass: [String, Object],
+    width: {
+      type: Number,
+      required: true
+    },
+    height: {
+      type: Number,
+      required: true
+    },
+    src: {
+      type: String,
+      required: true
+    },
+    tinySrc: {
+      type: String,
+      required: true
+    },
+    wrapperClass: {
+      type: [String, Object],
+      default: ''
+    }
   },
 
   setup (props) {
