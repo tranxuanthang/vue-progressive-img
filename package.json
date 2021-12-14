@@ -1,6 +1,6 @@
 {
   "name": "@tranxuanthang/vue-progressive-img",
-  "version": "0.0.1",
+  "version": "1.0.0-alpha.1",
   "main": "index.js",
   "license": "MIT",
   "main": "src/index.js"
