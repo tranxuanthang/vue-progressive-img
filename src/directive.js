@@ -8,7 +8,7 @@ const observerCallback = (entries, observer) => {
 }
 
 export default {
-  beforeMount(el, binding) {
+  bind (el, binding) {
     el.observer = null
 
     if ('IntersectionObserver' in window) {
@@ -80,7 +80,7 @@ export default {
     })
   },
 
-  beforeUnmount(el, binding) {
+  unbind (el, binding) {
     if (el.observer) {
       el.observer.disconnect()
     }
