@@ -21,8 +21,15 @@ export default {
     imgs.forEach(img => {
       const width = img.width
       const height = img.height
-      const fullSrc = img.dataset.fullSrc
+      const fullSrc = img.src || img.dataset.fullSrc
       const tinySrc = img.dataset.tinySrc
+
+      if (!width || !height || !tinySrc) {
+        return
+      }
+
+      // Set src to blank to prevent original image from loading
+      img.src = ''
 
       const piWrapper = document.createElement('span')
       piWrapper.className = 'progressive-img_capturer progressive-img_wrapper'
@@ -43,15 +50,19 @@ export default {
         piFull.classList.remove('progressive-img_hidden')
         piTiny.classList.add('progressive-img_hidden')
 
-        // img.attributes.forEach(attr => {
-        //   if (!piFull.getAttribute(attr.name)) {
-        //     piFull.setAttribute(attr.name, attr.value)
-        //   }
-        // })
+        // Add back attributes from original element
+        img.attributes.forEach(attr => {
+          if (!piFull.getAttribute(attr.name)) {
+            piFull.setAttribute(attr.name, attr.value)
+          }
+        })
 
-        // if (img.getAttribute('class')) {
-        //   piFull.classList.add(img.getAttribute('class'))
-        // }
+        // Add back classes from original element
+        if (img.getAttribute('class')) {
+          img.classList.forEach(cl => {
+            piFull.classList.add(cl)
+          })
+        }
       }
 
       piWrapper.appendChild(piTiny)

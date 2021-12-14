@@ -1,6 +1,6 @@
 .progressive-img_filter-blur {
   /* Dark magic from https://stackoverflow.com/a/48095387/2338507 */
-  filter: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='sharpBlur'%3E%3CfeGaussianBlur stdDeviation='12'%3E%3C/feGaussianBlur%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 9 0'%3E%3C/feColorMatrix%3E%3CfeComposite in2='SourceGraphic' operator='in'%3E%3C/feComposite%3E%3C/filter%3E%3C/svg%3E%0A#sharpBlur");
+  filter: url('#sharpBlur');
 }
 
 .progressive-img_wrapper {
@@ -29,4 +29,15 @@
 
 .progressive-img_hidden {
   opacity: 0;
+}
+
+.filter-svg {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
